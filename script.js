@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showTab(tabId) {
         document.getElementById(tabId).classList.add('active');
+        tabLink.classList.add('active');
     }
 
     tabLinks.forEach(link => {
@@ -65,3 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
         tabLinks[0].click();
     }
 });
+
+const harmbuger = document.querySelector('.harm-burger');
+const navmenu = document.querySelector('.navmenu');
+
+harmbuger.addEventListener("click",()=>
+{
+  harmbuger.classList.toggle("active");
+  navmenu.classList.toggle("active");
+})
+
+function onClickMenu() {
+  document.getElementById("menu").classList.toggle("icon");
+  document.getElementById("nav").classList.toggle("change");
+}
